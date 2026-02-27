@@ -1,3 +1,115 @@
-Algoritmo nombreX
-
+Algoritmo estructuraProyecto
+	Definir opc, x Como Entero
+	Definir hrsSemestre, hrsSemana, faltas, maxFaltas, matSem, matRep Como Entero
+	Definir minAsis, mitad Como Real
+	Definir materia Como Caracter
+	//no se como poner el mientras o el ciclo que haga que se ejecute como dijo la maestra
+	Repetir
+		Limpiar Pantalla
+		Escribir "========================================="
+		Escribir "       Consultas académicas UACH"
+		Escribir "========================================="
+		Escribir " 1) Promedio de 3 parciales"
+		Escribir " 2) Examen no ordinario"
+		Escribir " 3) Baja definitiva por materias básicas"
+		Escribir " 4) Equipo"
+		Escribir " 5) Salir"
+		Escribir "========================================="
+		Escribir " Selecciona una opción: " Sin Saltar
+		Leer opc
+		Limpiar Pantalla
+		Segun opc Hacer
+			Caso 1:
+				Escribir " Promedio de 3 parciales"
+				Escribir " Proximamente..."
+				Escribir " Presione cualquier tecla para volver al menu principal"
+				Esperar Tecla
+			Caso 2:
+				Escribir " -------------------------------------------"
+				Escribir "  ¿Puedo presentar el examen no ordinario?"
+				Escribir "             ¡Averiguémoslo!"
+				Escribir " -------------------------------------------"
+				Escribir ""
+				//Faltas y reprobadas vs examen no ordinario
+				Escribir " Materia a evaluar: " Sin Saltar
+				Leer materia
+				Repetir
+					Escribir " Horas a la semana de ", materia  ": "Sin Saltar
+					Leer hrsSemana
+					
+					Si hrsSemana<1 o hrsSemana>5 Entonces
+						Escribir " Error. Las horas deben estar en un rango de 2 a 5"
+					FinSi
+				Hasta Que hrsSemana>1 y hrsSemana<=5	
+				hrsSemestre=hrsSemana*16
+				Escribir " Llevas ", hrsSemestre, " horas de ", materia, " al semestre." 
+				minAsis=hrsSemestre*0.6 //redondear hacia arriba si sale decimal
+				Si ((minAsis+1)-redon(minAsis)) <>1 Entonces
+					minAsis=trunc(minAsis)+1
+				FinSi
+				maxFaltas=hrsSemestre-minAsis
+				Escribir " Tienes derecho a ", maxFaltas, " faltas"
+				Repetir
+					Escribir " Faltas en ", materia, ": " Sin Saltar
+					Leer faltas
+					Si faltas<0 o faltas>hrsSemestre Entonces
+						Escribir " Ingresa un número entre 0 y ", hrsSemestre
+					FinSi
+				Hasta Que faltas>=0 y faltas<=hrsSemestre
+				Si faltas > maxFaltas Entonces
+					Escribir " No tienes derecho a presentar examen no ordinario"
+					//aquí debería devolverse al menu principal con una tecla
+					Escribir ""
+					Escribir " Presiona cualquier tecla para volver al menu principal"
+					Esperar Tecla
+				SiNo
+					Escribir ""
+					Escribir " -----------------------------------------------------------------------"
+					Escribir "| Con base en tus faltas tienes derecho a presentar examen no ordinario |"
+					Escribir "| Ahora veremos si con base en materias reprobadas puedes presentarlo.  |"
+					Escribir " -----------------------------------------------------------------------"
+					Escribir ""
+					Repetir
+						Escribir " Materias cursadas este semestre: "Sin Saltar
+						Leer matSem
+						Si matSem <1 o matSem>10
+							Escribir " Ingresa un número entre 1 y 10"
+						FinSi
+					Hasta Que matSem>=1 y matSem<=10
+					
+					Repetir
+						Escribir " Materias reprobadas: " Sin Saltar
+						Leer matRep
+						Si matRep<0 o matRep>matSem Entonces
+							Escribir " Error. No se aceptan cantidades negativas, ni mayores a las materias del semestre."
+						FinSi
+						
+					Hasta Que matRep>=0 y matRep<=matSem
+					mitad = redon(matSem/2)
+					
+					Si matRep>mitad Entonces
+						Escribir " No tienes derecho a presentar examen ordinario por la cantidad de materias reprobadas."
+					SiNo
+						Escribir " Preparate! Tienes derecho a presentar examen no ordinario."
+					FinSi
+					//devuelve al menu principal con una tecla
+					Escribir ""
+					Escribir " Presione cualquier tecla para volver al menu principal"
+					Esperar Tecla
+				FinSi
+			Caso 3:
+				Escribir " Examen no ordinario"
+				Escribir " Proximamente..."
+				Escribir " Presione cualquier tecla para volver al menu principal"
+				Esperar Tecla
+			Caso 4:
+				Escribir " Equipo"
+				Escribir " Proximamente..."
+				Escribir " Presione cualquier tecla para volver al menu principal"
+				Esperar Tecla
+			Caso 5:
+				Escribir " Salir"
+				//se sale
+		FinSegun
+	Hasta Que opc=5
 FinAlgoritmo
