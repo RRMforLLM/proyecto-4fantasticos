@@ -32,7 +32,7 @@ Algoritmo estructuraProyecto
 					Si primer<0 o primer >10 Entonces
 						Escribir " No se permiten calificaciones menores a 0 o mayores a 10"
 					FinSi
-				Hasta Que primer>0 y primer<=10
+				Hasta Que primer>=0 y primer<=10
 				//Validar segundo parcial
 				Repetir
 					Escribir " Ingresa segundo parcial: " Sin Saltar
@@ -40,7 +40,7 @@ Algoritmo estructuraProyecto
 					Si segund<0 o segund>10 Entonces
 						Escribir " No se permiten calificaciones menores a 0 o mayores a 10"
 					FinSi
-				Hasta Que segund>0 y segund<=10
+				Hasta Que segund>=0 y segund<=10
 				
 				//Validar tercer parcial
 				Repetir
@@ -49,7 +49,7 @@ Algoritmo estructuraProyecto
 					Si tercer<0 o tercer>10 Entonces
 						Escribir " No se permiten calificaciones menores a 0 o mayores a 10"
 					FinSi
-				Hasta Que tercer>0 y tercer<=10
+				Hasta Que tercer>=0 y tercer<=10
 				//Calcular el promedio
 				promedio= (primer*0.3)+(segund*0.3)+(tercer*0.4)
 				Escribir " ------------------------------"
