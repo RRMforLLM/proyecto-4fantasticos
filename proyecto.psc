@@ -3,7 +3,6 @@ Algoritmo estructuraProyecto
 	Definir hrsSemestre, hrsSemana, faltas, maxFaltas, matSem, matRep Como Entero
 	Definir minAsis, mitad Como Real
 	Definir materia Como Caracter
-    //no se como poner el mientras o el ciclo que haga que se ejecute como dijo la maestra
     // estas variables son del caso 1
     Definir primer, segund, tercer, promedio Como Real
 	Definir mater Como Caracter
@@ -24,44 +23,44 @@ Algoritmo estructuraProyecto
 		Segun opc Hacer
 			Caso 1:
 				Limpiar Pantalla
-					Escribir " Promedio de 3 parciales"
-					Escribir "De que materia deseas calcular el promedio" Sin Saltar	
-					Leer mater
-					Repetir
-						Escribir "Ingresa primer parcial"Sin Saltar
-						Leer primer
-						Si primer<0 o primer >10 Entonces
-							Escribir "No se permiten calificaciones menores a 0 o mayores a 10"
-						FinSi
-					Hasta Que primer>0 y primer<=10
-					//Validar segundo parcial
-					Repetir
-						Escribir "Ingresa segundo parcial" Sin Saltar
-						leer segund
-						Si segund<0 o segund>10 Entonces
-							Escribir "No se permiten calificaciones menores a 0 o mayores a 10"
-						FinSi
-					Hasta Que segund>0 y segund<=10
-					
-					//Validar tercer parcial
-					Repetir
-						Escribir"Ingresa tercer parcial de " Sin Saltar
-						Leer tercer
-						Si tercer<0 o tercer>10 Entonces
-							Escribir "No se permiten calificaciones menores a 0 o mayores a 10"
-						FinSi
-					Hasta Que tercer>0 y tercer<=10
-					//Calcular el promedio
-					promedio= (primer*0.3)+(segund*0.3)+(tercer*0.4)
-					Escribir "--------------------------------"
-					Escribir "El promedio de  " , mater " es:" , promedio
-					//Indicar si aprobo o no la materia
-					Si promedio>=7 Entonces
-						Escribir "Felicidades aprobaste " , mater
-					Sino 
-						Escribir "No aprobaste, ponte a estudiar más"
+				Escribir " Promedio de 3 parciales"
+				Escribir " De que materia deseas calcular el promedio: " Sin Saltar	
+				Leer mater
+				Repetir
+					Escribir " Ingresa primer parcial: "Sin Saltar
+					Leer primer
+					Si primer<0 o primer >10 Entonces
+						Escribir " No se permiten calificaciones menores a 0 o mayores a 10"
 					FinSi
-				Escribir " Presione cualquier tecla para volver al menu principal"
+				Hasta Que primer>0 y primer<=10
+				//Validar segundo parcial
+				Repetir
+					Escribir " Ingresa segundo parcial: " Sin Saltar
+					leer segund
+					Si segund<0 o segund>10 Entonces
+						Escribir " No se permiten calificaciones menores a 0 o mayores a 10"
+					FinSi
+				Hasta Que segund>0 y segund<=10
+				
+				//Validar tercer parcial
+				Repetir
+					Escribir" Ingresa tercer parcial: " Sin Saltar
+					Leer tercer
+					Si tercer<0 o tercer>10 Entonces
+						Escribir " No se permiten calificaciones menores a 0 o mayores a 10"
+					FinSi
+				Hasta Que tercer>0 y tercer<=10
+				//Calcular el promedio
+				promedio= (primer*0.3)+(segund*0.3)+(tercer*0.4)
+				Escribir " ------------------------------"
+				Escribir " El promedio de " , mater " es: " , promedio
+				//Indicar si aprobo o no la materia
+				Si promedio>=7 Entonces
+					Escribir " Felicidades aprobaste " , mater
+				Sino 
+					Escribir " No aprobaste, ponte a estudiar más"
+				FinSi
+				Escribir " Presione cualquier tecla para volver al menu"
 				Esperar Tecla
 			Caso 2:
 				Escribir " -------------------------------------------"
@@ -99,7 +98,7 @@ Algoritmo estructuraProyecto
 					Escribir " No tienes derecho a presentar examen no ordinario"
 					//aquí debería devolverse al menu principal con una tecla
 					Escribir ""
-					Escribir " Presiona cualquier tecla para volver al menu principal"
+					Escribir " Presiona cualquier tecla para volver al menu"
 					Esperar Tecla
 				SiNo
 					Escribir ""
@@ -133,27 +132,46 @@ Algoritmo estructuraProyecto
 					FinSi
 					//devuelve al menu principal con una tecla
 					Escribir ""
-					Escribir " Presione cualquier tecla para volver al menu principal"
+					Escribir " Presione cualquier tecla para volver al menu"
 					Esperar Tecla
 				FinSi
 			Caso 3:
-				Escribir " Examen no ordinario"
+				Escribir " Baja definitiva por materias básicas"
 				Escribir " Proximamente..."
-				Escribir " Presione cualquier tecla para volver al menu principal"
+				Escribir " Presione cualquier tecla para volver al menu"
 				Esperar Tecla
 			Caso 4:
-				Escribir " Equipo"
-				Escribir " Proximamente..."
-				Escribir " Presione cualquier tecla para volver al menu principal"
+				Escribir "      LOS        **************"
+				Escribir "             **********************"
+				Escribir "          ****************************"
+				Escribir "      ************            ************"
+				Escribir "     *********                    *********"
+				Escribir "    *********       //      ||      *********"
+				Escribir "   ********        //       ||        ********"
+				Escribir "  ********        //        ||         ********"
+				Escribir " ********        //         ||          ********"
+				Escribir " ********        -_-_-_-_-_-||          ********"
+				Escribir " ********                   ||          ********"
+				Escribir "  ********                  ||         ********"
+				Escribir "   ********                 ||        ********"
+				Escribir "    *********               ||      *********"
+				Escribir "     *********                    *********"
+				Escribir "      ************            ************"
+				Escribir "          ****************************"
+				Escribir "             **********************   "
+				Escribir "                 **************       FANTÁSTICOS"
+				Escribir " "
+				Escribir "         Carlos Terrazas - matricula"
+				Escribir "         Ricardo Robles  - matricula"
+				Escribir "         Elías ¿Campos?  - matricula"
+				Escribir "         Mariel Rivas M  - 394611"
+				Escribir " "
+				Escribir "  Presione cualquier tecla para volver al menu"
 				Esperar Tecla
 			Caso 5:
-				Escribir " Salir"
+				Escribir " Saliendo del programa..."
+				Esperar 1 Segundos
 				//se sale
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
-
-
-
-
-
