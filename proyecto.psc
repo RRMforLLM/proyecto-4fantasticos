@@ -3,12 +3,10 @@ Algoritmo estructuraProyecto
 	Definir hrsSemestre, hrsSemana, faltas, maxFaltas, matSem, matRep Como Entero
 	Definir minAsis, mitad Como Real
 	Definir materia Como Caracter
+    //no se como poner el mientras o el ciclo que haga que se ejecute como dijo la maestra
     // estas variables son del caso 1
     Definir primer, segund, tercer, promedio Como Real
-	Definir mater, continuar Como Caracter
-	Definir minAsis, mitad Como Real
-	Definir materia Como Caracter
-	//no se como poner el mientras o el ciclo que haga que se ejecute como dijo la maestra
+	Definir mater Como Caracter
 	Repetir
 		Limpiar Pantalla
 		Escribir "========================================="
@@ -156,6 +154,7 @@ Algoritmo estructuraProyecto
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
+
 
 
 
