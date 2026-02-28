@@ -20,8 +20,46 @@ Algoritmo estructuraProyecto
 		Limpiar Pantalla
 		Segun opc Hacer
 			Caso 1:
-				Escribir " Promedio de 3 parciales"
-				Escribir " Proximamente..."
+				Limpiar Pantalla
+					Escribir " Promedio de 3 parciales"
+					Escribir "De que materia deseas calcular el promedio" Sin Saltar	
+					Leer mater
+					Repetir
+						Escribir "Ingresa primer parcial"Sin Saltar
+						Leer primer
+						Si primer<0 o primer >10 Entonces
+							Escribir "No se permiten calificaciones menores a 0 o mayores a 10"
+						FinSi
+					Hasta Que primer>0 y primer<=10
+					//Validar segundo parcial
+					Repetir
+						Escribir "Ingresa segundo parcial" Sin Saltar
+						leer segund
+						Si segund<0 o segund>10 Entonces
+							Escribir "No se permiten calificaciones menores a 0 o mayores a 10"
+						FinSi
+					Hasta Que segund>0 y segund<=10
+					
+					//Validar tercer parcial
+					Repetir
+						Escribir"Ingresa tercer parcial de " Sin Saltar
+						Leer tercer
+						Si tercer<0 o tercer>10 Entonces
+							Escribir "No se permiten calificaciones menores a 0 o mayores a 10"
+						FinSi
+					Hasta Que tercer>0 y tercer<=10
+					//Calcular el promedio
+					promedio= (primer*0.3)+(segund*0.3)+(tercer*0.4)
+					Escribir "--------------------------------"
+					Escribir "El promedio de  " , mater " es:" , promedio
+					//Indicar si aprobo o no la materia
+					Si promedio>=7 Entonces
+						Escribir "Felicidades aprobaste " , mater
+					Sino 
+						Escribir "No aprobaste, ponte a estudiar más"
+					FinSi
+				Escribir " Presione cualquier tecla para volver al menu principal"
+				Esperar Tecla
 				Escribir " Presione cualquier tecla para volver al menu principal"
 				Esperar Tecla
 			Caso 2:
@@ -113,3 +151,4 @@ Algoritmo estructuraProyecto
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
+
