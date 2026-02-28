@@ -63,8 +63,6 @@ Algoritmo estructuraProyecto
 					FinSi
 				Escribir " Presione cualquier tecla para volver al menu principal"
 				Esperar Tecla
-				Escribir " Presione cualquier tecla para volver al menu principal"
-				Esperar Tecla
 			Caso 2:
 				Escribir " -------------------------------------------"
 				Escribir "  ¿Puedo presentar el examen no ordinario?"
@@ -154,6 +152,7 @@ Algoritmo estructuraProyecto
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
+
 
 
 
