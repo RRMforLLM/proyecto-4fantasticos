@@ -1,4 +1,4 @@
-Algoritmo estructuraProyecto
+Algoritmo Proyecto1
 	Definir opc, x Como Entero
     Definir primer, segund, tercer, promedio Como Real
 	Definir mater Como Caracter
@@ -251,4 +251,5 @@ Algoritmo estructuraProyecto
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
+
 
