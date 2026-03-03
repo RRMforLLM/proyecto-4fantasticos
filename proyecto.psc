@@ -1,11 +1,14 @@
 Algoritmo estructuraProyecto
 	Definir opc, x Como Entero
+    Definir primer, segund, tercer, promedio Como Real
+	Definir mater Como Caracter
+	//estas variables son del caso 1
 	Definir hrsSemestre, hrsSemana, faltas, maxFaltas, matSem, matRep Como Entero
 	Definir minAsis, mitad Como Real
 	Definir materia Como Caracter
-    // estas variables son del caso 1
-    Definir primer, segund, tercer, promedio Como Real
-	Definir mater Como Caracter
+	//estas son las variables del caso 2
+	Definir Materias_basicas, Materias_nobasi, Materias_curso, Materias_repro, diferencia, mitad_curso Como Entero
+	//variables del caso 3
 	Repetir
 		Limpiar Pantalla
 		Escribir "========================================="
@@ -136,10 +139,83 @@ Algoritmo estructuraProyecto
 					Esperar Tecla
 				FinSi
 			Caso 3:
-				Escribir " Baja definitiva por materias básicas"
-				Escribir " Proximamente..."
-				Escribir " Presione cualquier tecla para volver al menu"
-				Esperar Tecla
+				Limpiar Pantalla
+				Escribir "=================================================="
+				Escribir ""
+				Escribir "      Baja Definitiva por Materias Básicas"
+				Escribir ""
+				Escribir "=================================================="
+				Repetir
+					Escribir "¿Cuántas materias cursas?" Sin Saltar
+					Leer Materias_curso
+					Si Materias_curso=0 o Materias_curso<0 Entonces
+						Escribir "Error, no se aceptan valores negativos o nulos"
+					FinSi
+				Hasta Que Materias_curso>0
+				//recopila todas las materias del curso
+				
+				Escribir "--------------------------------------------------"
+				Escribir ""
+				Escribir "--------------------------------------------------"
+				
+				Repetir
+					Escribir "¿Cuántas materias básicas no acreditaste?" Sin Saltar
+					Leer Materias_basicas
+					Si Materias_basicas<0 o Materias_basicas>3 Entonces
+						Escribir "Valor no valido, sobrepasas o violas cantidad de materias básicas permitidas"
+					FinSi
+				Hasta Que Materias_basicas>0 o Materias_basicas<3
+				//las materias basicas por lo general son 3
+				
+				Escribir "--------------------------------------------------"
+				Escribir ""
+				Escribir "--------------------------------------------------"
+				
+				diferencia=Materias_curso-3
+				//es el cálculo del total de materias extra
+				Repetir
+					Escribir "¿Cuántas materias no básicas no acreditaste?" Sin Saltar
+					Leer Materias_nobasi
+					Si Materias_nobasi<0 o Materias_nobasi>diferencia Entonces
+						Escribir "Valor no valido, sobrepasas o violas cantidad de materias no básicas permitidas"
+					FinSi
+				Hasta Que Materias_nobasi>0 o Materias_nobasi<diferencia
+				//es el total de materias de diferencia no acreditadas
+				
+				Escribir "--------------------------------------------------"
+				Escribir ""
+				Escribir "--------------------------------------------------"
+				
+				Materias_repro=Materias_basicas+Materias_nobasi
+				Escribir "El total de materias reprobadas son: ",Materias_repro
+				mitad_curso=redon(Materias_curso/2)
+				//en caso de que sea division decimal, se redondea la mitad de materias
+				
+				Escribir "--------------------------------------------------"
+				
+				Si Materias_repro<mitad_curso Entonces
+					Escribir "Puedes presentar exámen no ordinario de las materias que"
+					Escribir "no acreditaste, o bien, recursarlas el próximo semestre"
+					//define derecho a exámen ordinario
+				SiNo
+					Si Materias_basicas=0 o Materias_basicas<3 Entonces
+						Escribir "No tienes derecho a exámen no ordinario, pero debes"
+						Escribir "recursar materias reprobadas el próximo semestre"
+						//solo si aprobaste al menos una básica
+					SiNo
+						Escribir "Al haber reprobado todas las materías básicas, "
+						Escribir "tienes BAJA DEFINITIVA"
+						//solo si todas las materias importantes son reprobadas
+					FinSi
+				FinSi
+				
+				Escribir "--------------------------------------------------"
+				Escribir ""
+				Escribir "--------------------------------------------------"
+				
+				Escribir "Oprime cualquier tecla para continuar"
+				Esperar Tecla	
+				Limpiar Pantalla
 			Caso 4:
 				Escribir "      LOS        **************"
 				Escribir "             **********************"
@@ -175,3 +251,4 @@ Algoritmo estructuraProyecto
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
+
