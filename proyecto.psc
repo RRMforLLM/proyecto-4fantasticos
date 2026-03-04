@@ -238,7 +238,7 @@ Algoritmo Proyecto1
 				Escribir "                 **************       FANTÁSTICOS"
 				Escribir " "
 				Escribir "         Carlos Terrazas - matricula"
-				Escribir "         Ricardo Robles  - matricula"
+				Escribir "         Ricardo Robles  - 394570"
 				Escribir "         Elías ¿Campos?  - matricula"
 				Escribir "         Mariel Rivas M  - 394611"
 				Escribir " "
@@ -251,5 +251,6 @@ Algoritmo Proyecto1
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
+
 
 
