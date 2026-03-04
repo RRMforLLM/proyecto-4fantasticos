@@ -198,7 +198,7 @@ Algoritmo Proyecto1
 					Escribir "no acreditaste, o bien, recursarlas el próximo semestre"
 					//define derecho a exámen ordinario
 				SiNo
-					Si Materias_basicas=0 o Materias_basicas<3 Entonces
+					Si Materias_basicas>0 o Materias_basicas<3 Entonces
 						Escribir "No tienes derecho a exámen no ordinario, pero debes"
 						Escribir "recursar materias reprobadas el próximo semestre"
 						//solo si aprobaste al menos una básica
@@ -251,6 +251,7 @@ Algoritmo Proyecto1
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
+
 
 
 
