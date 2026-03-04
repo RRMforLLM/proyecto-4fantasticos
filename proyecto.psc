@@ -78,7 +78,7 @@ Algoritmo Proyecto1
 					Escribir " Horas a la semana de ", materia  ": "Sin Saltar
 					Leer hrsSemana
 					
-					Si hrsSemana<1 o hrsSemana>5 Entonces
+					Si hrsSemana<2 o hrsSemana>5 Entonces
 						Escribir " Error. Las horas deben estar en un rango de 2 a 5"
 					FinSi
 				Hasta Que hrsSemana>1 y hrsSemana<=5	
@@ -251,6 +251,7 @@ Algoritmo Proyecto1
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
+
 
 
 
