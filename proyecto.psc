@@ -1,4 +1,4 @@
-Algoritmo Proyecto1
+Algoritmo Parcial1
 	Definir opc, x Como Entero
     Definir primer, segund, tercer, promedio Como Real
 	Definir mater Como Caracter
@@ -44,7 +44,6 @@ Algoritmo Proyecto1
 						Escribir " No se permiten calificaciones menores a 0 o mayores a 10"
 					FinSi
 				Hasta Que segund>=0 y segund<=10
-				
 				//Validar tercer parcial
 				Repetir
 					Escribir" Ingresa tercer parcial: " Sin Saltar
@@ -78,7 +77,7 @@ Algoritmo Proyecto1
 					Escribir " Horas a la semana de ", materia  ": "Sin Saltar
 					Leer hrsSemana
 					
-					Si hrsSemana<2 o hrsSemana>5 Entonces
+					Si hrsSemana<1 o hrsSemana>5 Entonces
 						Escribir " Error. Las horas deben estar en un rango de 2 a 5"
 					FinSi
 				Hasta Que hrsSemana>1 y hrsSemana<=5	
@@ -179,7 +178,7 @@ Algoritmo Proyecto1
 					Si Materias_nobasi<0 o Materias_nobasi>diferencia Entonces
 						Escribir "Valor no valido, sobrepasas o violas cantidad de materias no básicas permitidas"
 					FinSi
-				Hasta Que Materias_nobasi>0 o Materias_nobasi<diferencia
+				Hasta Que Materias_nobasi>0 o Materias_nobasi<=diferencia
 				//es el total de materias de diferencia no acreditadas
 				
 				Escribir "--------------------------------------------------"
@@ -198,7 +197,7 @@ Algoritmo Proyecto1
 					Escribir "no acreditaste, o bien, recursarlas el próximo semestre"
 					//define derecho a exámen ordinario
 				SiNo
-					Si Materias_basicas>0 o Materias_basicas<3 Entonces
+					Si Materias_basicas=0 o Materias_basicas<3 Entonces
 						Escribir "No tienes derecho a exámen no ordinario, pero debes"
 						Escribir "recursar materias reprobadas el próximo semestre"
 						//solo si aprobaste al menos una básica
@@ -215,7 +214,7 @@ Algoritmo Proyecto1
 				
 				Escribir "Oprime cualquier tecla para continuar"
 				Esperar Tecla	
-				Limpiar Pantalla
+	Limpiar Pantalla
 			Caso 4:
 				Escribir "      LOS        **************"
 				Escribir "             **********************"
@@ -237,10 +236,10 @@ Algoritmo Proyecto1
 				Escribir "             **********************   "
 				Escribir "                 **************       FANTÁSTICOS"
 				Escribir " "
-				Escribir "         Carlos Terrazas - matricula"
-				Escribir "         Ricardo Robles  - 394570"
-				Escribir "         Elías ¿Campos?  - matricula"
-				Escribir "         Mariel Rivas M  - 394611"
+				Escribir "         Carlos Terrazas Rugelio - 394704"
+				Escribir "         Ricardo Robles Mancha  - 394570"
+				Escribir "         Elías Campos García - 394412"
+				Escribir "         Mariel Rivas Martínez - 394611"
 				Escribir " "
 				Escribir "  Presione cualquier tecla para volver al menu"
 				Esperar Tecla
