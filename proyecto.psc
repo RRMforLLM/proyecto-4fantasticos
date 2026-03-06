@@ -163,7 +163,7 @@ Algoritmo Parcial1
 					Si Materias_basicas<0 o Materias_basicas>3 Entonces
 						Escribir " Valor no valido, sobrepasas o violas cantidad de materias básicas permitidas"
 					FinSi
-				Hasta Que Materias_basicas>0 o Materias_basicas<3
+				Hasta Que Materias_basicas>=0 y Materias_basicas<=3
 				//las materias basicas por lo general son 3
 				
 				Escribir "--------------------------------------------------"
@@ -178,7 +178,7 @@ Algoritmo Parcial1
 					Si Materias_nobasi<0 o Materias_nobasi>diferencia Entonces
 						Escribir " Valor no valido, sobrepasas o violas cantidad de materias no básicas permitidas"
 					FinSi
-				Hasta Que Materias_nobasi>0 o Materias_nobasi<=diferencia
+				Hasta Que Materias_nobasi>=0 y Materias_nobasi<=diferencia
 				//es el total de materias no básicas no acreditadas
 				
 				Escribir "--------------------------------------------------"
