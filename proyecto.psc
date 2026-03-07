@@ -147,7 +147,7 @@ Algoritmo Parcial1
 				Repetir
 					Escribir " ¿Cuántas materias cursas? " Sin Saltar
 					Leer Materias_curso
-					Si Materias_curso=0 o Materias_curso<0 Entonces
+					Si Materias_curso<=0 Entonces
 						Escribir " Error, no se aceptan valores negativos o nulos"
 					FinSi
 				Hasta Que Materias_curso>0
@@ -158,7 +158,7 @@ Algoritmo Parcial1
 				Escribir "--------------------------------------------------"
 				
 				Repetir
-					Escribir " ¿Cuántas materias básicas no acreditaste?" Sin Saltar
+					Escribir " ¿Cuántas materias básicas no acreditaste? " Sin Saltar
 					Leer Materias_basicas
 					Si Materias_basicas<0 o Materias_basicas>3 Entonces
 						Escribir " Valor no valido, sobrepasas o violas cantidad de materias básicas permitidas"
