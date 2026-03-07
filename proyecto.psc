@@ -202,7 +202,7 @@ Algoritmo Parcial1
 						Escribir " recursar materias reprobadas el próximo semestre"
 						//solo si aprobaste al menos una básica
 					SiNo
-						Escribir " Al haber reprobado todas las materías básicas, "
+						Escribir " Al haber reprobado todas las materias básicas, "
 						Escribir " tienes BAJA DEFINITIVA"
 						//solo si todas las materias importantes son reprobadas
 					FinSi
@@ -250,3 +250,4 @@ Algoritmo Parcial1
 		FinSegun
 	Hasta Que opc=5
 FinAlgoritmo
+
